@@ -42,10 +42,9 @@ so a row would be:
 Then, the script merges the training and test subsets *row-wise*.
 A particularity is that, given the size of the sets, the script erases the 
 generated datasets as they are merged into bigger ones with 
-`rm(ds_sub_train, ds_X_train, ds_y_train)`. The final dataset is called `ds`
+`rm(ds_sub_train, ds_X_train, ds_y_train)`. The final dataset is called `ds`.
 
-### 2.2. Extracts only the measurements on the mean and standard deviation for 
-         each measurement.
+### 2.2. Extract only the measurements on the mean and standard deviation for each measurement
 
 To extract the measurements, it loads the features.txt file and uses grep to
 search for them. **Decision:** grep searches for mean(), std() and meanFreq(), 
@@ -66,7 +65,7 @@ of that are the columns to subset (plus the subject and label ones)
 To keep it simple the code just transforms $label into a factor and renames the 
 levels according to the ones provided in activity_labels.txt.
 
-### 2.4. Appropriately labels the data set with descriptive variable names
+### 2.4. Appropriately label the data set with descriptive variable names
 
 The names are already loaded in var_names for the step 2, the result of its grep
 can subset it to get only the names needed.
@@ -83,8 +82,7 @@ a user of this type of dataset.
 
 *Note:* the script also corrects the 'BodyBody' typo in some variables.
 
-### 2.5. Creates a tidy data set with the average of each variable for each 
-         activity and each subject.
+### 2.5. Create a tidy data set with the average of each variable for each activity and each subject
 The script creates a tidy **wide** data set by calling `aggregate()` on the 
 columns which are not subject nor label and sumarizes them with the `mean()` 
 function. The differences between wide and long data and how they relate to 
