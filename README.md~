@@ -37,7 +37,7 @@ for each subset, training and test, the script loads and joins *column-wise*
 the files subject\_&lt;subset&gt;.txt, X_&lt;subset&gt;.txt and y_&lt;subset&gt;.txt
 so a row would be:
 
-|&nbsp;subject&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;y&nbsp;|
+|subject |     X      | y |
 
 Then, the script merges the training and test subsets *row-wise*.
 A particularity is that, given the size of the sets, the script erases the 
